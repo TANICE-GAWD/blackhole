@@ -64,19 +64,11 @@ let autoRotateEnabled = false;
 const autoRotateToggle = document.getElementById('autoRotateToggle');
 const rotateIconSVG = `<svg class="ui-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>`;
 
-function updateAutoRotateText() {
-  autoRotateToggle.innerHTML = rotateIconSVG + `<span>Auto-Rotate: ${autoRotateEnabled ? "ON" : "OFF"}</span>`;
-}
-updateAutoRotateText();
-autoRotateToggle.addEventListener('click', () => {
-  autoRotateEnabled = !autoRotateEnabled;
-  controls.autoRotate = autoRotateEnabled;
-  updateAutoRotateText();
-});
+
 
 const triggerEffectButton = document.getElementById('triggerEffectButton');
 const effectIconSVG = `<svg class="ui-icon" viewBox="0 0 24 24" style="stroke-width:1.5;" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="8"/></svg>`;
-triggerEffectButton.innerHTML = effectIconSVG + `<span>Disk Echo</span>`;
+
 triggerEffectButton.addEventListener('click', () => {
   triggerDiskEcho();
 });
